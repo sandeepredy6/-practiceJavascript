@@ -1,0 +1,11 @@
+let students=56; 
+if(students<=36)
+{
+
+console.log("students all present ")
+
+}else{
+
+console.log("few students abscent ");
+
+}
