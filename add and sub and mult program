@@ -1,0 +1,11 @@
+const num1 = 56;
+const num2 = 23;
+
+// add two numbers
+const sub = num1 - num2;
+const mul= num1*num2;
+
+
+// display the sum
+console.log('The sum of ' + num1 + ' and ' + num2 + ' is: ' + sub);
+console.log('The mul of ' + num1 + ' and ' + num2 + ' is: ' + mul);
