@@ -1,0 +1,4 @@
+let x;
+for(x=2;x<=8;x++) {
+document.write("value of x=" +x++);
+}
