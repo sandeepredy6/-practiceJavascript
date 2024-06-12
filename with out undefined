@@ -1,0 +1,7 @@
+var empty = [];
+
+var years = [1996, 1997, 2001, 1975, 1943];
+
+for(var empty = 0; empty < years.length; empty++) {
+    console.log(years[empty]);
+}
