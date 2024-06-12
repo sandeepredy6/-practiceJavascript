@@ -1,0 +1,11 @@
+let laptops=["dell","hp","mac","sony","lenovo"];
+for (let i=0;i<=laptops.length;i++){
+document.write(laptops[i]);
+}
+output:
+dell
+hp
+mac
+sony
+lenovo
+undefined
