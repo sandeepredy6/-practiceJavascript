@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>parctice Carousel</title>
+    <style>
+        .scroll{
+            background: rgb(229, 231, 231);
+            height: auto;
+            width: 98%;
+            border-radius: 15px;
+            margin: auto;
+            padding: 10px;
+            margin-top: 30px;
+            box-shadow: 5px 5px 5px #cfd6d5;
+            align-items: center;
+        }
+
+        .review-items {
+            align-items: center;
+            justify-content: space-evenly;
+            width: 250px;
+            padding: 10px;
+            align-items: center;
+        }
+
+        .review-items img {
+            height: 550px;
+            width: 1300px;
+            border-radius: 5px;
+            margin-left: 4px;
+            box-shadow: rgb(241, 238, 238) 0px 4px 15px;
+        }
+
+        .review-button {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .review-button button {
+            color: #fff;
+            background: rgb(20, 87, 117);
+            font-weight: bold;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .review-items {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let rev = 0;
+        carousel(rev);
+
+        function previousReview() {
+            rev = rev - 1;
+            carousel(rev);
+        }
+
+        function nextReview() {
+            rev = rev + 1;
+            carousel(rev);
+        }
+
+        function carousel(review) {
+            let reviews = document.getElementsByClassName("review-items");
+
+            if (review >= reviews.length) {
+                review = 0;
+                rev = 0;
+            }
+            if (review < 0) {
+                review = reviews.length - 1;
+                rev = reviews.length - 1;
+            }
+            for (let i = 0; i < reviews.length; i++) {
+                reviews[i].style.display = "none";
+            }
+            reviews[review].style.display = "block";
+        }
+    </script>
+
+    <div class="scroll">
+        <div class="review-items">
+            <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/flower-store-templates.jpg"
+                width="500px" height="500px" class="slide" alt="image">
+        </div>
+
+        <div class="review-items">
+            <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/cakeshop-colorlib-template.jpg"
+                width="500px" height="500px" class="slide" alt="image">
+        </div>
+
+        <div class="review-items">
+            <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/ogani-free-template.jpg"
+                width="500px" height="500px" class="slide" alt="image">
+        </div>
+        <div class="review-items">
+            <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/31/4031994d-9092-4aa7-aea1-f52f2ae5194f1654006594976-Activewear_DK.jpg"
+                width="500px" height="500px" class="slide" alt="image">
+        </div>
+        <div class="review-items">
+            <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/divi-popular-multipurpose-theme.png"
+                width="500px" height="500px" class="slide" alt="image">
+        </div>
+
+        <div class="review-button">
+            <button id="prev" onclick="previousReview()">
+                Backward
+            </button>
+
+            <button id="next" onclick="nextReview()">
+                Forward
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>
