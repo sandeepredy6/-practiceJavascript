@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <script>
+        //array concatenation --> combining arrays
+        let laptops = ["hp", "dell", "lenovo", "acer"];
+        let courses = new Array('html', 'css', 'javascript', 'react');
+        document.write(courses);
+        let courses1 = ["java", "oracle", "pega", "cloud"];
+        let concateArray = courses1.concat(courses);
+        document.write("concated array:", concateArray);
+        //conversion of an array to string
+        document.write(laptops.toString());
+        let str = 'string';
+        let str1 = "string";
+        document.write(str);
+        document.write(str1);
+        //by using constructor(new) keyword
+        const str2 = new String('this is string');
+        document.write(str2);
+
+        const str3 = 'literal string';
+        document.write(str3);
+        //empty string
+        const str4 = '';
+        document.write(str4);
+        //multiline string --> backquote we should use
+        let str5 = `This is a 
+        multiline 
+        String`;
+        document.write(str5);
+        //operations on js strings
+        //finding the length
+        let one = "web                      DEVELOPMENT";
+        let len = one.length;
+        document.write("string length:", len);
+        //string concatenation -->combining two or more strings
+        let result = str2 + str3;
+        document.write("concatenation:", result);
+        //breaking long strings(not supported by all browsers)
+        let str6 = "web development includes so many topics like\ html, css, javascript, reactjs, mysql, dba";
+        document.write(str6);
+        //substring()method
+        let substring = str6.substring(45, 70);
+        document.write(substring);
+        //converting to string to upper case and lower case
+        let upperCase = str6.toUpperCase()
+        document.write(upperCase);
+        let lowerCase = one.toLowerCase();
+        document.write(lowerCase);
+        //string search in javascript--> indexOf()method
+        let searchStr = str6.indexOf('html');
+        document.write(searchStr);
+        let searchStr1 = str3.indexOf('literal');
+        document.write(searchStr1);
+        //string replace -->replace()method
+        let newStr = str6.replace('reactjs', 'nodejs');
+        document.write(newStr);
+        //whitespace from string --->trim()method
+        let newStr1 = one.trim();
+        document.write(newStr1);
+        //access characters from string --> charAt()method
+        let harsha = "full stack";
+        let charAtIndex = harsha[7];
+        document.write(charAtIndex);
+        //comparesion in js --> localCompare()method
+        document.write(str2 == str3);
+        document.write(str2.localeCompare(str3));
+    </script>
+</body>
+
+</html>
